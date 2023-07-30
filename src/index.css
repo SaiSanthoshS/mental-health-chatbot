@@ -6,29 +6,33 @@
 body {
     margin: 0;
     padding: 0;
-
 }
 
 .app{
     background-color: #343541 ;
     display: flex;
+
 }
 
 .side-bar{
-    background-color: #202123;
+    background: rgb(21,121,203);
+    background: linear-gradient(0deg, rgba(21,121,203,1) 19%, rgba(11,151,221,1) 70%, rgba(1,182,240,1) 100%);
     height: 100vh;
     width: 244px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
 }
 
 button{
     border: solid 0.5px rgba(255,255,255,0.5);
-    background-color: transparent;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
+    color: white;
+    background-color: #08acec;
+    border-color: #187ccc;
 }
 
 nav{
@@ -53,13 +57,14 @@ nav{
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #e6f3fe;
     justify-content: space-between;
     align-items: center;
     text-align: center;
 }
 
 .info{
-    color: rgba(255,255,255,0.5);
+    color:black;
     font-size: 11px;
     padding: 10px;
 }
@@ -69,26 +74,55 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
+
+.user-message {
+    display: flex;
+    background-color: #b0d4fc;
+    width: 33%;
+    padding: 10px;
+    margin: 20px 0px;
+    margin-left: 515px;
+    max-width: 650px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.assistant-message {
+    display: flex;
+    background-color: #C0C0C0;
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0px;
+    margin-left: 215px;
+    max-width: 650px;
+    border-radius: 10px;
+    text-align: center;
+}
+
 .input-container{
     position: relative;
     width: 100%;
     max-width: 650px;
 }
 
+#center-text {
+    margin-left: 200px;
+}
+
 input{
     width: 100%;
     border: none;
     font-size: 20px;
-    background-color: rgba(255,255,255,0.5);
+    color: white;
+    background-color:#66c2ff;
     padding: 12px 15px;
     border-radius: 5px ;
     box-shadow: rgba(0,0,0, 0.05) 0 54px 55px,
-        rgba(0,0,0, 0.05) 0 -12px 30px,
-        rgba(0,0,0, 0.05) 0 4px 6px,
-        rgba(0,0,0, 0.05) 0 12px 3px,
-        rgba(0,0,0, 0.05) 0 -3px 5px;
+    rgba(0,0,0, 0.05) 0 -12px 30px,
+    rgba(0,0,0, 0.05) 0 4px 6px,
+    rgba(0,0,0, 0.05) 0 12px 3px,
+    rgba(0,0,0, 0.05) 0 -3px 5px;
 }
 
 input:focus{
@@ -100,29 +134,53 @@ input:focus{
     bottom: 15px;
     right: 0px;
     cursor: pointer;
+
+}
+#mic
+{
+    position: absolute;
+    bottom: 13px;
+    right: 25px;
+    cursor: pointer;
+}
+#send
+{
+    position: absolute;
+    bottom: 13px;
+    right: -10px;
+    cursor: pointer;
 }
 
 .feed{
     width: 100%;
     padding: 0;
-    height: 100%;
+    height: 90%;
+    margin-top: 80px;
     align-items: center;
-}
-
-.feed li {
-    display: flex;
-    background-color: #444654;
-    width: 95%;
-    padding: 20px;
-    margin: 20px 0px;
-    margin-left: 10px;
+    overflow-x:hidden;
+    background-color: #e6f3fe;
 }
 
 .feed p{
-    color: rgba(255,255,255,0.5);
+    color: black;
     font-size:14px ;
     text-align: left;
 }
 .feed p.role {
     min-width: 100px;
+}
+
+.name
+{
+    color:black;
+    float: right;
+}
+
+img1
+{
+    float: left;
+}
+#text
+{
+    color:black;
 }
